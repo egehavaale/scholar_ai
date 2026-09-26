@@ -1,0 +1,55 @@
+# Python / PyInstaller
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+scholar_ai.rar
+# Environments (Virtual Environments)
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# SQLite / Database
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs & Temporary files
+*.log
+logs/
+*.tmp
+
+# HuggingFace / Transformers Local Cache (Big Model Files)
+.cache/
+huggingface/

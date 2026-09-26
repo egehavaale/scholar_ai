@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "smartdoc-summarizer"
+version = "0.1.0"
+description = "Desktop application for document ingestion, natural language summarization, structured entity extraction, and local archival storage."
+readme = "README.md"
+requires-python = ">=3.9,<3.14"
+license = { text = "MIT" }
+authors = [
+    { name = "Ege Havale", email = "egehavale3@gmail.com" }
+]
+dependencies = [
+    "PySide6>=6.5.0",
+    "SQLAlchemy>=2.0.0",
+    "transformers>=4.35.0",
+    "torch>=2.0.0",
+    "pypdf>=3.17.0",
+    "python-docx>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/egehavaale"
+Repository = "https://github.com/egehavaale/scholarai"
+
+[project.gui-scripts]
+smartdoc = "app:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.3.0",
+]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 88
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort (import sorting)
+    "B",   # flake8-bugbear
+]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-ra -q"
